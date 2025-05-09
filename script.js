@@ -1,8 +1,8 @@
 let questions = [];
 let currentQuestionIndex = 0;
 let score = [];
-const questionContainer = document.getElementById('question-container');
-const answersContainer = document.getElementById('answers-container');
+const questionContainer = document.getElementById('perguntas');
+const answersContainer = document.getElementById('respostas');
 const nextBtn = document.getElementById('next-btn');
 const resultContainer = document.getElementById('result');
 
@@ -20,7 +20,7 @@ function startQuiz() {
 
 function showQuestion() {
   const currentQuestion = questions[currentQuestionIndex];
-  questionContainer.innerHTML = `<h2>${currentQuestion.question}</h2>`;
+  questionContainer.innerHTML = `<span style='font-weight: bold;'>${currentQuestion.question}</span>`;
   answersContainer.innerHTML = "";
   currentQuestion.answers.forEach(answer => {
     const btn = document.createElement('button');
